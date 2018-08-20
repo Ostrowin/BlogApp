@@ -1,0 +1,121 @@
+﻿/*
+    font-family: 'Hanalei Fill', cursive;
+    font-family: 'Lato', sans-serif;
+*/
+.container {
+    margin-top: 15%;
+}
+
+.button-LogIn {
+    margin-right: 2%;
+    text-align: center;
+    border-radius: 15%;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+select {
+    margin-left: 5px;
+}
+.MainTitle {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Hanalei Fill', cursive;
+}
+.MainParagraph {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+}
+.Main-A-Button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    margin: auto;
+    border-radius: 5%;
+    width: 100%;
+}
+.a-links{
+    text-decoration: none;
+}
+.a-links:hover{
+    text-decoration: none;
+}
+.jumbotron {
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin-top: 10%;
+    }
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+    .MainParagraph {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 7%;
+    }
+
+    .MainParagraph {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        margin-top: 6%;
+    }
+
+    .MainParagraph {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-top: 5%;
+    }
+
+    .MainParagraph {
+        font-size: 20px;
+    }
+}
+.img-fluid {
+    max-height: 225px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+/*Style for Log In Modal*/
+.card-height {
+    min-height: 400px;
+}
+.p-exercise {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #4a535b;
+    text-align: center;
+}
+.exercise-step{
+    min-height: 80px;
+    width: 100%;
+    text-align: center;
+}
+    .exercise-step p {
+        font-size: 16px;
+        display: flex;
+        justify-content: center; /* align horizontal */
+    }
+.card-height-exercises{
+    min-height: 110px;
+}
+

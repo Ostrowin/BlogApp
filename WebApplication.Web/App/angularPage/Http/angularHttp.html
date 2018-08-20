@@ -1,0 +1,61 @@
+﻿<div ng-include="'App/sharedPartials/navigation.html'"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-dark mb-2" ng-click="GetNumbers(length)">Get Numbers</button>
+            <input class="form-control" type="number" ng-model="length" />
+        </div>
+        <div class="col-sm-9" ng-if="data != 0">
+            <table class="table table-dark table-bordered table-hover">
+                <tr>
+                    <td ng-repeat="x in data track by $index">{{x}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="PostNumbers(person)">Post</button>
+        </div>
+        <div class="col-sm-9">
+            <form>
+                <label>Name:</label>
+                <input type="text" ng-model="person.name" /><br />
+
+                <label>Last Name:</label>
+                <input type="text" ng-model="person.lastName" /><br />
+
+                <label>Phone:</label>
+                <input type="tel" ng-model="person.phone" /><br />
+
+                <label>Gender: </label>
+                <input type="radio" ng-model="person.gender" value="male" /> Male
+                <input type="radio" ng-model="person.gender" value="female" /> Female <br />
+            </form>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="PutSomething(data)">PutSomething</button>
+        </div>
+        <!--<div class="col-sm-9">
+            <label>Name:</label>
+            <input type="text" ng-model="doc.name" /><br />
+
+            <label>Data:</label>
+            <input type="text" ng-model="doc.content" /><br />
+        </div>-->
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="DeleteList(data)">DeleteContent</button><br />
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="DbSomething()">DbSomething</button><br />
+        </div>
+    </div>
+</div>

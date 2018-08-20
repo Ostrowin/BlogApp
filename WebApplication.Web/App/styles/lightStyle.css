@@ -1,0 +1,88 @@
+﻿html, body {
+    background-color: lavender;
+    color: #212529;
+}
+.button-LogIn {
+    background-color: #343a40;
+    border: 1px solid SteelBlue;
+    color: #bbb;
+}
+    .button-LogIn:hover {
+        background-color: MidnightBlue;
+        color: white;
+    }
+.MainTitle {
+    color: SteelBlue;
+}
+.Main-A-Button {
+    background-color: SteelBlue;
+    color: #bbb;
+}
+
+    .Main-A-Button:hover {
+        background-color: MidnightBlue;
+        color: black;
+        cursor: pointer;
+    }
+.card {
+    background-color: SteelBlue;
+}
+
+    .card:hover {
+        background-color: MidnightBlue;
+        cursor: pointer;
+    }
+.jumbotron {
+    background-color: #aaa;
+}
+
+.jumbotron-heading {
+    color: SteelBlue;
+}
+.btn-primary {
+    color: #fff;
+    background-color: SteelBlue;
+    border-color: SteelBlue;
+}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: MidnightBlue;
+        border-color: CornflowerBlue;
+    }
+/*Style for Log In Modal*/
+.modal-header {
+    background-color: #343a40;
+    color: papayawhip;
+}
+
+.modal-body {
+    background-color: #343a40;
+    color: papayawhip;
+}
+
+.wrong-valid {
+    color: red;
+}
+.modal-footer {
+    background-color: #343a40;
+    color: papayawhip;
+}
+.jumbotron-hover:hover{
+    background-color: #999;
+    cursor: pointer;
+}
+.p-exercise {
+    color: #212529;
+}
+
+.exercise-step {
+    background-color: #aaa;
+}
+
+.exercise-step-active {
+    border: 5px solid SteelBlue;
+}
+
+.exercise-step-deactive {
+    border: 5px solid #999;
+}

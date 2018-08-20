@@ -1,0 +1,89 @@
+﻿
+<div class="modal-header">
+    <h1 class="font-SourceSansPro-Bold">Join the resistance: Ommmmmmm</h1>
+</div>
+<div class="modal-body">
+    <form name="form.LoginForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Login:</label>
+                </div>
+                <div class="col-sm-5">
+                    <input name="login" type="text" ng-model="LoginFields.login" required ng-minlength="3" ng-maxlength="16" ng-change="checkFormValid()"/>
+                </div><br />
+                <div class="col-sm-4">
+                    <div class="wrong-valid" ng-if="form.LoginForm.login.$error.required">This field is required<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.login.$error.minlength">The text is too short (min 3)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.login.$error.maxlength">The text is too long (max 16)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.login.$error.pattern">Invalid text format<br /></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>E-mail:</label>
+                </div>
+                <div class="col-sm-5">
+                    <input name="email" type="email" ng-model="LoginFields.email" required ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" ng-change="checkFormValid()"/>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrong-valid" ng-if="form.LoginForm.email.$error.required">This field is required<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.email.$error.pattern">Invalid text format<br /></div>
+                    <div class="wrong-valid" ng-if="!form.LoginForm.email.$error.required 
+                         && !form.LoginForm.email.$error.pattern 
+                         && LoginFields.email !== confirmedEmailValue">Emails are not the same</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Confirm E-mail:</label>
+                </div>
+                <div class="col-sm-5">
+                    <input name="confirmedEmail" type="email" ng-model="confirmedEmailValue" required ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" ng-change="checkEmail(); checkFormValid()"/>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedEmail.$error.required">This field is required{{form.LoginForm.confirmedEmail.$error.required}}<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedEmail.$error.pattern">Invalid text format<br /></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Password:</label>
+                </div>
+                <div class="col-sm-5">
+                    <input name="password" type="password" ng-model="LoginFields.password" required ng-minlength="8" ng-maxlength="64" ng-change="checkFormValid()"/>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrong-valid" ng-if="form.LoginForm.password.$error.required">This field is required<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.password.$error.minlength">The text is too short (min 8)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.password.$error.maxlength">The text is too long (max 64)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.password.$error.pattern">Invalid text format<br /></div>
+                    <div class="wrong-valid" ng-if="!form.LoginForm.password.$error.required 
+                         && !form.LoginForm.password.$error.pattern 
+                         && !form.LoginForm.password.$error.minlength
+                         && !form.LoginForm.password.$error.maxlengt
+                         && LoginFields.password !== confirmedPasswordValue">Passwords are not the same</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Confirm Password:</label>
+                </div>
+                <div class="col-sm-5">
+                    <input name="confirmedPassword" type="password" ng-model="confirmedPasswordValue" required ng-minlength="8" ng-maxlength="64" ng-change="checkPassword(); checkFormValid()"/>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedPassword.$error.required">This field is required<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedPassword.$error.minlength">The text is too short (min 8)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedPassword.$error.maxlength">The text is too long (max 64)<br /></div>
+                    <div class="wrong-valid" ng-if="form.LoginForm.confirmedPassword.$error.pattern">Invalid text format<br /></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-success" ng-disabled="!isLoginFormReallyValid" ng-click="ok()"><i class="ace-icon fa fa-ok"></i> Ok</button>
+    <button class="btn btn-danger" ng-click="close()"><i class="fa fa-close"></i> Close</button>
+</div>

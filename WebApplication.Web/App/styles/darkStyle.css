@@ -1,0 +1,88 @@
+﻿html, body {
+    background-color: #2f2f2f;
+    color: papayawhip;
+}
+
+.button-LogIn {
+    background-color: black;
+    border: 1px solid SpringGreen;
+    color: papayawhip;
+}
+
+    .button-LogIn:hover {
+        background-color: MediumSeaGreen;
+        color: #222;
+    }
+
+.MainTitle {
+    color: SpringGreen;
+}
+
+.Main-A-Button {
+    background-color: SpringGreen;
+    color: #222;
+}
+
+    .Main-A-Button:hover {
+        background-color: MediumSeaGreen;
+        color: black;
+        cursor: pointer;
+    }
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.card {
+    background-color: SpringGreen;
+}
+
+    .card:hover {
+        background-color: MediumSeaGreen;
+        cursor: pointer;
+    }
+.card-text {
+    color: #4a535b;
+}
+.jumbotron{
+    background-color: #1e1e1e;
+}
+.jumbotron-heading {
+    color: SpringGreen;
+}
+.btn-primary {
+    color: #4a535b;
+    background-color: SpringGreen;
+    border-color: SpringGreen;
+}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: MediumSeaGreen;
+        border-color: ForestGreen;
+    }
+/*Style for Log In Modal*/
+.modal-header {
+    color: #212529;
+}
+.modal-body {
+    color: #212529;
+}
+.wrong-valid{
+    color: red;
+}
+.jumbotron-hover:hover {
+    background-color: #0d0d0d;
+    cursor: pointer;
+}
+.p-exercise {
+    color: #4a535b;
+}
+    .exercise-step {
+    background-color: #1e1e1e;
+}
+.exercise-step-active {
+    border: 5px solid SpringGreen;
+}
+.exercise-step-deactive {
+    border: 5px solid #4f4f4f;
+}

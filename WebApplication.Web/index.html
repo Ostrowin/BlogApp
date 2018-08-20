@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="{{Content.lang}}">
+<head>
+    <meta charset="utf-8" />
+    <title>{{Content.title}}</title>
+    <base href="/" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill|Lato:300,400,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="App/styles/mainStyle.css" rel="stylesheet" type="text/css" />
+    <link ng-href="App/styles/{{themes.selectedOption.name}}style.css" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="App/app_module.js"></script>
+    <script src="App/route.js"></script>
+
+    <script src="App/Start/languageService.js"></script>
+
+    <script src="App/Start/startController.js"></script>
+    <script src="App/Start/modalOpenController.js"></script>
+    <script src="App/Home/homeController.js"></script>
+    <script src="App/angularPage/angularController.js"></script>
+    <script src="App/angularPage/Http/angularHttpController.js"></script>
+    <script src="App/Calisthenics/calisthenicsController.js"></script>
+    <script src="App/Calisthenics/Push-Ups/pushUpsController.js"></script>
+
+
+</head>
+<body>
+    <div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <button class="button-LogIn" ng-click="openModal()">Log In</button>
+
+            <select name="selectTheme" id="myTheme"
+                    ng-options="option.name for option in themes.availableOptions track by option.id"
+                    ng-model="themes.selectedOption"></select>
+
+            <select name="mySelect" id="mySelect"
+                    ng-options="option.name for option in languages.availableOptions track by option.id"
+                    ng-model="languages.selectedOption"></select>
+        </div>
+    </nav>
+</header>
+
+<!--
+        TODO: Dropdown button for img flags for languages 
+
+        <select name="mySelect" id="mySelect"
+                    ng-model="languages.selectedOption">
+                <option ng-value="languages.selectedOption" ng-repeat="(key,value) in languages.availableOptions track by value.id">
+                    {{value.src}}</option>
+            </select>
+-->

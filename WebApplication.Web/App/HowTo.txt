@@ -1,0 +1,4 @@
+﻿How to Modal
+
+1. Add a lib(ui.bootstrap)
+2. Generate a htmlscript (type="text/ng-template" id="x.html")
