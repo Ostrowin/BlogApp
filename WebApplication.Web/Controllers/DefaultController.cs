@@ -59,30 +59,24 @@ namespace WebApplication.Web.Controllers
         [HttpGet]
         public IHttpActionResult getDbValues()
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=tcp:rezija2roj.database.windows.net,1433;Initial Catalog=test;User Id=demo;Password=zaq1@WSX;"))
+            List<object> list = new List<object>();
+            using (SqlConnection con = new SqlConnection("Data Source=tcp:rezija2roj.database.windows.net,1433;Initial Catalog=test;User ID=demo;Password=zaq1@WSX;"))
             {
                 con.Open();
-                using (SQLiteCommand com = new SQLiteCommand(con))
+                using (SqlCommand com = new SqlCommand("Select * FROM [SalesLT].[Address] where AddressID<30", con))
                 {
-                    com.CommandText = "Select * FROM [SalesLT].[Address] where id<30";
-                    using (SQLiteDataReader reader = com.ExecuteReader())
+                    using (SqlDataReader reader = com.ExecuteReader())
                     {
-                        reader.Read();
-                        try
+                        while (reader.Read())
                         {
-                            con.Close();
-                            return Ok(reader.GetValue(1).ToString());
-                        }
-                        catch(Exception e)
-                        {
-                            con.Close();
-                            return Ok(e.Message);
+                            var myString = reader.GetString(1);
+                            list.Add(myString);
                         }
                     }
                 }
                 con.Close();
             }
-            return Ok("empty");
+            return Ok(list);
         }
 
         [HttpPost]

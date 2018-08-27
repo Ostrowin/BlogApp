@@ -1,0 +1,55 @@
+﻿<div ng-include="'App/sharedPartials/navigation.html'"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="GetValues(select, from, where)">DBGet</button><br />
+            select:<br />
+            <input type="text" ng-model="select"><br />
+            from:<br />
+            <input type="text" ng-model="from"><br />
+            where:<br />
+            <input type="text" ng-model="where" /> <br />
+
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="PostValues(DbDTO)">DBPost(Update)</button><br />
+            Update:<br />
+            <input type="text" ng-model="DbDTO.Db"><br />
+            set:<br />
+            <input type="text" ng-model="DbDTO.Set"><br />
+            where id=:<br />
+            <input type="text" ng-model="DbDTO.Where" /> <br />
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="PutValues(person)">DBPut</button><br />
+            login:<br />
+            <input type="text" ng-model="person.login"><br />
+            email:<br />
+            <input type="text" ng-model="person.email"><br />
+            pass:<br />
+            <input type="password" ng-model="person.password" /> <br />
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-dark" ng-click="DeleteValues(deleteFrom, dWhere)">DBDelete</button><br />
+            delete from:<br />
+            <input type="text" ng-model="deleteFrom"><br />
+            where id=:<br />
+            <input type="text" ng-model="dWhere" /> <br />
+        </div>
+    </div>
+    <br /><br />
+          <div class="col-sm-12" ng-if="data != 0">
+              <table class="table table-dark table-bordered table-hover">
+                  <tr ng-repeat="x in data track by $index">
+                      <td>{{x.ID}}</td>
+                      <td>{{x.login}}</td>
+                      <td>{{x.email}}</td>
+                      <td>{{x.password}}</td>
+                  </tr>
+              </table>
+          </div>
+    <div class="col-sm-12">
+        <button class="btn btn-dark" ng-click="CreateTable()">Create table</button>
+    </div>
+</div>

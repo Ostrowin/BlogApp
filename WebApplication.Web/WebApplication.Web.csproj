@@ -102,6 +102,8 @@
   <ItemGroup>
     <Content Include="App\angularPage\angular.html" />
     <Content Include="App\angularPage\angularController.js" />
+    <Content Include="App\angularPage\Databases\angularDatabases.html" />
+    <Content Include="App\angularPage\Databases\angularDatabasesController.js" />
     <Content Include="App\angularPage\Http\angularHttp.html" />
     <Content Include="App\angularPage\Http\angularHttpController.js" />
     <Content Include="App\app_module.js" />
@@ -232,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DbController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="DBModel\Address.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
@@ -278,11 +281,13 @@
     <Compile Include="DBModel\SalesOrderHeader.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DbDTO.cs" />
     <Compile Include="Models\Doc.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\testPersonDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
