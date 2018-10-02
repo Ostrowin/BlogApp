@@ -1,0 +1,19 @@
+﻿<div ng-include="'App/sharedPartials/navigation.html'"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-dark" ng-click="GetPersons()">Get All Persons</button>
+        </div>
+        <div class="col-sm-12" ng-if="data != 0">
+            <table class="table table-dark table-bordered table-hover">
+                <tr ng-repeat="x in data track by $index">
+                    <td>{{x.ID}}</td>
+                    <td>{{x.login}}</td>
+                    <td>{{x.email}}</td>
+                    <td>{{x.password}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>

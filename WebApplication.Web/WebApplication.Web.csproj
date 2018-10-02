@@ -104,6 +104,8 @@
     <Content Include="App\angularPage\angularController.js" />
     <Content Include="App\angularPage\Databases\angularDatabases.html" />
     <Content Include="App\angularPage\Databases\angularDatabasesController.js" />
+    <Content Include="App\angularPage\DbViaRepo\DbRepo.html" />
+    <Content Include="App\angularPage\DbViaRepo\DbRepoController.js" />
     <Content Include="App\angularPage\Http\angularHttp.html" />
     <Content Include="App\angularPage\Http\angularHttpController.js" />
     <Content Include="App\app_module.js" />
@@ -985,6 +987,7 @@
     <Compile Include="Controllers\calisthenicsController.cs" />
     <Compile Include="Controllers\DbController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="DBModel\Address.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
@@ -1064,6 +1067,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplication.Model\WebApplication.Model.csproj">
+      <Project>{98ae7759-e715-4863-866c-3e2f84f65318}</Project>
+      <Name>WebApplication.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApplication.Repository\WebApplication.Repository.csproj">
+      <Project>{cc921eba-2ce0-49e8-8cc8-f158abf56bdf}</Project>
+      <Name>WebApplication.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

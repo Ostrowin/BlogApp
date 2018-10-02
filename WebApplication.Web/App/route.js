@@ -20,6 +20,10 @@
             templateUrl: 'App/angularPage/Databases/angularDatabases.html',
             controller: 'angularDatabasesController'
         })
+        .when('/angularPage/dbViaRepo', {
+            templateUrl: 'App/angularPage/DbViaRepo/DbRepo.html',
+            controller: 'dbRepoController'
+        })
         .when('/calisthenics', {
             templateUrl: 'App/Calisthenics/calisthenics.html',
             controller: 'calisthenicsController'
