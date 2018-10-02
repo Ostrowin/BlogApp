@@ -13,7 +13,7 @@
 
         $scope.displayForm = function () {
             console.log($scope.form.LoginForm.$valid);
-        }
+        };
         var sameEmail = false;
         var samePassword = false;
         $scope.isLoginFormReallyValid = false;
@@ -24,24 +24,24 @@
             } else {
                 sameEmail = false;
             }
-        }
+        };
         $scope.checkPassword = function () {
             if ($scope.LoginFields.password === $scope.confirmedPasswordValue) {
                 samePassword = true;
             } else {
                 samePassword = false;
             }
-        }
+        };
         $scope.checkFormValid = function () {
-            if (sameEmail == true
-                && samePassword == true
-                && $scope.form.LoginForm.$valid == true) {
+            if (sameEmail === true
+                && samePassword === true
+                && $scope.form.LoginForm.$valid === true) {
                 $scope.isLoginFormReallyValid = true;
             } else {
                 $scope.isLoginFormReallyValid = false;
             }
-                    
-        }
+
+        };
 
         $scope.ok = function () {
             $uibModalInstance.close($rootScope.LoginFields);

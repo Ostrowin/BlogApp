@@ -49,11 +49,10 @@ namespace WebApplication.Web.Controllers
                     {
                         // Always call Close when done reading.
                         reader.Close();
+                        conn.Close();
                     }
 
                 }
-
-                return Ok(numbers);
             }
         }
         [HttpGet]

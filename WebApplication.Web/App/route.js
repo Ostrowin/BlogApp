@@ -1,4 +1,4 @@
-﻿app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+﻿app.config(['$routeProvider', '$locationProvider','$translateProvider', function ($routeProvider, $locationProvider, $translateProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'App/Start/start.html',
@@ -32,4 +32,6 @@
             redirectTo: '/'
         });
     $locationProvider.html5Mode(true);
+
+
 }]);

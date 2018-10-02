@@ -1,5 +1,5 @@
-﻿var app = angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
-    .run(['$rootScope', 'langService', '$uibModal', function ($rootScope, langService, $uibModal) {
+﻿var app = angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngAnimate','ngSanitize','pascalprecht.translate'])
+    .run(['$rootScope', 'langService', '$uibModal','$translate', function ($rootScope, langService, $uibModal, $translate) {
         $rootScope.languages = {
             availableOptions: [
                 { id: '1', name: 'pl', src: "App/Images/pl.png" },
@@ -13,7 +13,7 @@
                 { id: '1', name: 'light' },
                 { id: '2', name: 'dark' }
             ],
-            selectedOption: { id: '1', name: 'light' }
+            selectedOption: { id: '2', name: 'dark' }
         };
         $rootScope.Content = null;
         var init = function () {
@@ -21,14 +21,12 @@
                 .then(function (response) {
                     $rootScope.Content = response.data;
                 });
-        }
+        };
         $rootScope.$watch('languages.selectedOption', function (newValue, oldValue) {
-            langService.getLang($rootScope.languages.selectedOption.name)
-                .then(function (response) {
-                    $rootScope.Content = response.data;
-                })
+            $translate.use($rootScope.languages.selectedOption.name);
         });
         init();
+
         $rootScope.openModal = function () {
             var modalInstance = " ";
             $rootScope.openModal = function () {
@@ -57,6 +55,6 @@
                 }, function () {
                     //gets triggers when modal is dismissed. You can basically handle data here
                 });
-            }
-        }
+            };
+        };
     }]);

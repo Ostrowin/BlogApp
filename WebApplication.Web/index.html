@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app" lang="{{Content.lang}}">
+<html ng-app="app" lang="{{'lang' | translate}}">
 <head>
     <meta charset="utf-8" />
-    <title>{{Content.title}}</title>
+    <title>{{'title' | translate }}</title>
     <base href="/" />
 
 
@@ -13,14 +13,24 @@
     <link ng-href="App/styles/{{themes.selectedOption.name}}style.css" rel="stylesheet" type="text/css" />
 
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-translate.js"></script>
+    <script src="Scripts/angular-translate-loader-url.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.18.1/angular-translate-loader-static-files.js"></script>
+    <script src="Scripts/i18n/angular-locale_pl-pl.js"></script>
+    <script src="Scripts/i18n/angular-locale_en-us.js"></script>
+    <script src="Scripts/i18n/angular-locale_es-es.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
     <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 
     <script src="App/app_module.js"></script>
+
     <script src="App/route.js"></script>
+    <script src="App/translate.js"></script>
 
     <script src="App/Start/languageService.js"></script>
+    <script src="App/Calisthenics/calisthenicsService.js"></script>
 
     <script src="App/Start/startController.js"></script>
     <script src="App/Start/modalOpenController.js"></script>

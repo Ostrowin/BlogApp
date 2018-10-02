@@ -33,7 +33,6 @@ namespace WebApplication.Web.DBModel
         public virtual DbSet<ProductDescription> ProductDescription { get; set; }
         public virtual DbSet<ProductModel> ProductModel { get; set; }
         public virtual DbSet<ProductModelProductDescription> ProductModelProductDescription { get; set; }
-        public virtual DbSet<SalesOrderDetail> SalesOrderDetail { get; set; }
         public virtual DbSet<SalesOrderHeader> SalesOrderHeader { get; set; }
     }
 }

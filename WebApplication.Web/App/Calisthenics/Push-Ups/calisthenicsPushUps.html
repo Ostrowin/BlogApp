@@ -12,95 +12,159 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-sm-1"></div>
-
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[wall.isDone]">
                     <p>
                         Pompki przy ścianie
                     </p>
-                    <input type="checkbox" ng-click="saveValue()"> 1x10<br>
-                    <input type="checkbox" > 2x25<br>
-                    <input type="checkbox" > 3x50<br>
+                    <div ng-if="!wall.stepOne"><input type="checkbox" ng-model="wall.stepOne"> 1x10<br></div>
+                    <div ng-if="wall.stepOne"> 1x10 done </div>
+
+                    <div ng-if="!wall.stepTwo"><input type="checkbox" ng-model="wall.stepTwo"> 2x25<br></div>
+                    <div ng-if="wall.stepTwo"> 2x25 done </div>
+
+                    <div ng-if="!wall.stepThree"><input type="checkbox" ng-model="wall.stepThree"> 3x50<br></div>
+                    <div ng-if="wall.stepThree"> 3x50 done </div>
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[incline.isDone]">
                     <p>
                         Pompki pochylone
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x10<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x25<br>
-                    <input type="checkbox" name="1x3" value="done3"> 3x40<br>
+
+                    <div ng-if="!incline.stepOne"><input type="checkbox" ng-model="incline.stepOne"> 1x10<br></div>
+                    <div ng-if="incline.stepOne"> 1x10 done </div>
+
+                    <div ng-if="!incline.stepTwo"><input type="checkbox" ng-model="incline.stepTwo"> 2x20<br></div>
+                    <div ng-if="incline.stepTwo"> 2x20 done </div>
+
+                    <div ng-if="!incline.stepThree"><input type="checkbox" ng-model="incline.stepThree"> 3x40<br></div>
+                    <div ng-if="incline.stepThree"> 3x40 done </div>
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-active mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[kneeling.isDone]">
                     <p>
                         Pompki na kolanach
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x10<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x15<br>
-                    <input type="checkbox" name="1x3" value="done3"> 3x30<br>
+
+                    <div ng-if="!kneeling.stepOne"><input type="checkbox" ng-model="kneeling.stepOne"> 1x10<br></div>
+                    <div ng-if="kneeling.stepOne"> 1x10 done </div>
+
+                    <div ng-if="!kneeling.stepTwo"><input type="checkbox" ng-model="kneeling.stepTwo"> 2x15<br></div>
+                    <div ng-if="kneeling.stepTwo"> 2x15 done </div>
+
+                    <div ng-if="!kneeling.stepThree"><input type="checkbox" ng-model="kneeling.stepThree"> 3x30<br></div>
+                    <div ng-if="kneeling.stepThree"> 3x30 done </div>
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[half.isDone]">
                     <p>
                         Półpompki
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x8<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x12<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x25<br>
+
+                    <div ng-if="!half.stepOne"><input type="checkbox" ng-model="half.stepOne"> 1x8<br></div>
+                    <div ng-if="half.stepOne"> 1x8 done </div>
+
+                    <div ng-if="!half.stepTwo"><input type="checkbox" ng-model="half.stepTwo"> 2x12<br></div>
+                    <div ng-if="half.stepTwo"> 2x12 done </div>
+
+                    <div ng-if="!half.stepThree"><input type="checkbox" ng-model="half.stepThree"> 2x25<br></div>
+                    <div ng-if="half.stepThree"> 2x25 done </div>
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[full.isDone]">
                     <p>
                         Pełne pompki
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x20<br>
+
+                    <div ng-if="!full.stepOne"><input type="checkbox" ng-model="full.stepOne"> 1x5<br></div>
+                    <div ng-if="full.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!full.stepTwo"><input type="checkbox" ng-model="full.stepTwo"> 2x10<br></div>
+                    <div ng-if="full.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!full.stepThree"><input type="checkbox" ng-model="full.stepThree" ng-click="StepComplete(full, 'stepThree')"> 2x20<br></div>
+                    <div ng-if="full.stepThree"> 2x20 done </div>
+
                 </div>
 
                 <div class="col-sm-1"></div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[close.isDone]">
                     <p>
                         Pompki wąskie
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x20<br>
+
+                    <div ng-if="!close.stepOne"><input type="checkbox" ng-model="close.stepOne"> 1x5<br></div>
+                    <div ng-if="close.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!close.stepTwo"><input type="checkbox" ng-model="close.stepTwo"> 2x10<br></div>
+                    <div ng-if="close.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!close.stepThree"><input type="checkbox" ng-model="close.stepThree"> 2x20<br></div>
+                    <div ng-if="close.stepThree"> 2x20 done </div>
+
                 </div>
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[uneven.isDone]">
                     <p>
                         Pompki nierówne
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x20<br>
+
+                    <div ng-if="!uneven.stepOne"><input type="checkbox" ng-model="uneven.stepOne"> 1x5<br></div>
+                    <div ng-if="uneven.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!uneven.stepTwo"><input type="checkbox" ng-model="uneven.stepTwo"> 2x10<br></div>
+                    <div ng-if="uneven.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!uneven.stepThree"><input type="checkbox" ng-model="uneven.stepThree"> 2x20<br></div>
+                    <div ng-if="uneven.stepThree"> 2x20 done </div>
+
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[oneArmHalf.isDone]">
                     <p>
                         Półpompki na jednej ręce
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x20<br>
+
+                    <div ng-if="!oneArmHalf.stepOne"><input type="checkbox" ng-model="oneArmHalf.stepOne"> 1x5<br></div>
+                    <div ng-if="oneArmHalf.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!oneArmHalf.stepTwo"><input type="checkbox" ng-model="oneArmHalf.stepTwo"> 2x10<br></div>
+                    <div ng-if="oneArmHalf.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!oneArmHalf.stepThree"><input type="checkbox" ng-model="oneArmHalf.stepThree"> 2x20<br></div>
+                    <div ng-if="oneArmHalf.stepThree"> 2x20 done </div>
+
                 </div>
 
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[lever.isDone]">
                     <p>
                         Pompki z dźwignią
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 2x20<br>
+
+                    <div ng-if="!lever.stepOne"><input type="checkbox" ng-model="lever.stepOne"> 1x5<br></div>
+                    <div ng-if="lever.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!lever.stepTwo"><input type="checkbox" ng-model="lever.stepTwo"> 2x10<br></div>
+                    <div ng-if="lever.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!lever.stepThree"><input type="checkbox" ng-model="lever.stepThree"> 2x20<br></div>
+                    <div ng-if="lever.stepThree"> 2x20 done </div>
+
                 </div>
-                <div class="col-sm-2 exercise-step exercise-step-deactive mr-2 mb-2">
+                <div class="col-sm-2 exercise-step mr-2 mb-2" ng-class="{0:'exercise-step-deactive', 1:'exercise-step-active'}[oneArm.isDone]">
                     <p>
                         Pompki na jednej ręce
                     </p>
-                    <input type="checkbox" name="1x1" value="done1"> 1x5<br>
-                    <input type="checkbox" name="1x2" value="done2"> 2x10<br>
-                    <input type="checkbox" name="1x3" value="done3"> 1x100<br>
+
+                    <div ng-if="!oneArm.stepOne"><input type="checkbox" ng-model="oneArm.stepOne"> 1x5<br></div>
+                    <div ng-if="oneArm.stepOne"> 1x5 done </div>
+
+                    <div ng-if="!oneArm.stepTwo"><input type="checkbox" ng-model="oneArm.stepTwo"> 2x10<br></div>
+                    <div ng-if="oneArm.stepTwo"> 2x10 done </div>
+
+                    <div ng-if="!oneArm.stepThree"><input type="checkbox" ng-model="oneArm.stepThree"> 1x100<br></div>
+                    <div ng-if="oneArm.stepThree"> 1x100 done </div>
+
                 </div>
                 <div class="col-sm-1"></div>
             </div>
