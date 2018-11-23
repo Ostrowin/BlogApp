@@ -24,6 +24,14 @@
             templateUrl: 'App/angularPage/DbViaRepo/DbRepo.html',
             controller: 'dbRepoController'
         })
+        .when('/angularPage/dbViaRepo/updatePerson', {
+            templateUrl: 'App/angularPage/DbViaRepo/UpdatePerson/updatePerson.html',
+            controller: 'UpdatePersonController'
+        })
+        .when('/angularPage/UIBootstrap', {
+            templateUrl: 'App/angularPage/UIBootstrap/uibootstrap.html',
+            controller: 'UIBootstrapController'
+        })
         .when('/calisthenics', {
             templateUrl: 'App/Calisthenics/calisthenics.html',
             controller: 'calisthenicsController'
@@ -35,7 +43,6 @@
         .otherwise({
             redirectTo: '/'
         });
+
     $locationProvider.html5Mode(true);
-
-
 }]);

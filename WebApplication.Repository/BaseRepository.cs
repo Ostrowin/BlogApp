@@ -25,7 +25,11 @@ namespace WebApplication.Repository
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (_dataContext != null)
+            {
+                _dataContext.Dispose();
+                _dataContext = null;
+            }
         }
     }
 }

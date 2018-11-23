@@ -10,10 +10,11 @@ namespace WebApplication.Repository
     public class TestRepository : BaseRepository, ITestRepository
     {
 
+        #region Customer
 
         public List<Customer> GetCustomers()
         {
-            return DataContext.Customer.ToList();
+            return DataContext.Customer.Take(20).ToList();
         }
 
         public Customer GetCustomer(int? id)
@@ -21,7 +22,7 @@ namespace WebApplication.Repository
             return DataContext.Customer.SingleOrDefault(x => x.CustomerID == id);
         }
 
-        public bool deleteCustomer(int id)
+        public bool DeleteCustomer(int id)
         {
             bool result = false;
             Customer entity = DataContext.Customer.SingleOrDefault(x => x.CustomerID == id);
@@ -33,9 +34,14 @@ namespace WebApplication.Repository
             }
             return result;
         }
+
+        #endregion
+
+        #region Person
+
         public List<TestPersons> GetPersons()
         {
-            return DataContext.TestPersons.ToList();
+            return DataContext.TestPersons.Take(20).ToList();
         }
 
         public TestPersons GetPerson(int? id)
@@ -55,10 +61,18 @@ namespace WebApplication.Repository
             }
             return result;
         }
+        public bool AddOrUpdatePerson(TestPersons person)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Product
 
         public List<Product> GetProducts()
         {
-            return DataContext.Product.ToList();
+            return DataContext.Product.Take(10).ToList();
         }
 
         public Product GetProduct(int? id)
@@ -66,7 +80,7 @@ namespace WebApplication.Repository
             return DataContext.Product.SingleOrDefault(x => x.ProductID == id);
         }
 
-        public bool deleteProduct(int id)
+        public bool DeleteProduct(int id)
         {
             bool result = false;
             Product entity = DataContext.Product.SingleOrDefault(x => x.ProductID == id);
@@ -78,5 +92,7 @@ namespace WebApplication.Repository
             }
             return result;
         }
+
+        #endregion
     }
 }

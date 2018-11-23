@@ -16,6 +16,7 @@ namespace WebApplication.Web.Controllers
         {
             _testRepository = new TestRepository();
         }
+        #region Person
 
         [HttpGet]
         public IHttpActionResult getPersons()
@@ -25,11 +26,22 @@ namespace WebApplication.Web.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult getPerson(int? id)
+        public IHttpActionResult getPerson(int? personId)
         {
-            TestPersons entity = _testRepository.GetPerson(id);
+            TestPersons entity = _testRepository.GetPerson(personId);
             return Ok(entity);
         }
+
+        [HttpDelete]
+        public IHttpActionResult deletePerson(int personId)
+        {
+            bool result = _testRepository.DeletePerson(personId);
+            return Ok(result);
+        }
+
+        #endregion
+
+        #region Customer
 
         [HttpGet]
         public IHttpActionResult getCustomers()
@@ -45,6 +57,9 @@ namespace WebApplication.Web.Controllers
             return Ok(entity);
         }
 
+        #endregion
+
+        #region Product
         [HttpGet]
         public IHttpActionResult getProducts()
         {
@@ -58,6 +73,6 @@ namespace WebApplication.Web.Controllers
             return Ok(entity);
         }
 
-
+        #endregion
     }
 }

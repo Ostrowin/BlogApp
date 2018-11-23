@@ -1,19 +1,54 @@
 ﻿<div ng-include="'App/sharedPartials/navigation.html'"></div>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-6">
-            <button class="btn btn-dark" ng-click="GetPersons()">Get All Persons</button>
+        <div class="col-2">
+            <button class="btn btn-dark" ng-click="GetPersons()">Get All Persons</button> <br /><br />
         </div>
+        <div class="col-2">
+            <button class="btn btn-dark" ng-click="GetCustomers()">Get (20) Customers</button><br /><br />
+        </div>
+        <div class="col-2">
+            <button class="btn btn-dark" ng-click="GetProducts()">Get (10) Products</button><br /><br />
+        </div>
+        <div class="col-2">
+            <button class="btn btn-dark" ng-click="GetPerson(personId)">Get Person by id</button> <br />
+            <input type="number" ng-model="personId" /><br /><br />
+        </div>
+
+        <div class="col-2">
+            <button class="btn btn-dark" ng-click="DeletePerson(personIdDelete)">Delete Person by id</button><br />
+            <input type="number" ng-model="personIdDelete" /><br /><br />
+        </div>
+
+        <div ng-if="data4!=0">{{data4}}</div>
         <div class="col-sm-12" ng-if="data != 0">
             <table class="table table-dark table-bordered table-hover">
                 <tr ng-repeat="x in data track by $index">
-                    <td>{{x.ID}}</td>
-                    <td>{{x.login}}</td>
-                    <td>{{x.email}}</td>
-                    <td>{{x.password}}</td>
+                    <td ng-repeat="(key, value) in x">
+                        <a href="/angularPage/dbViaRepo/updatePerson">
+                            <div style="height:100%;width:100%">
+                                {{value}}
+                            </div>
+                        </a>
+                    </td>
                 </tr>
             </table>
         </div>
-        <div class="col-6"></div>
+
+        <div class="col-sm-12" ng-if="data2 != 0">
+            <table class="table table-dark table-bordered table-hover">
+                <tr ng-repeat="x in data2 track by $index">
+                    <td ng-repeat="(key, value) in x">{{value}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-sm-12" ng-if="data3 != 0">
+            <table class="table table-dark table-bordered table-hover">
+                <tr ng-repeat="x in data3 track by $index">
+                    <td ng-repeat="(key, value) in x">{{value}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>

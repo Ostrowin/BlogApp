@@ -12,6 +12,20 @@
     <link href="App/styles/mainStyle.css" rel="stylesheet" type="text/css" />
     <link ng-href="App/styles/{{themes.selectedOption.name}}style.css" rel="stylesheet" type="text/css" />
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6Kf_uUDb9SoszEYH93pSc01903CU5ffg",
+    authDomain: "blogappair.firebaseapp.com",
+    databaseURL: "https://blogappair.firebaseio.com",
+    projectId: "blogappair",
+    storageBucket: "blogappair.appspot.com",
+    messagingSenderId: "1036967083667"
+  };
+  firebase.initializeApp(config);
+    </script>
+
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-translate.js"></script>
     <script src="Scripts/angular-translate-loader-url.min.js"></script>
@@ -39,6 +53,7 @@
     <script src="App/angularPage/Http/angularHttpController.js"></script>
     <script src="App/angularPage/Databases/angularDatabasesController.js"></script>
     <script src="App/angularPage/DbViaRepo/DbRepoController.js"></script>
+    <script src="App/angularPage/DbViaRepo/UpdatePerson/UpdatePersonController.js"></script>
     <script src="App/Calisthenics/calisthenicsController.js"></script>
     <script src="App/Calisthenics/Push-Ups/pushUpsController.js"></script>
 

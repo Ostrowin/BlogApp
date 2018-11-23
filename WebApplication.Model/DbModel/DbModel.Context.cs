@@ -20,6 +20,7 @@ namespace WebApplication.Model.DbModel
         public testEntities()
             : base("name=testEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -106,6 +106,8 @@
     <Content Include="App\angularPage\Databases\angularDatabasesController.js" />
     <Content Include="App\angularPage\DbViaRepo\DbRepo.html" />
     <Content Include="App\angularPage\DbViaRepo\DbRepoController.js" />
+    <Content Include="App\angularPage\DbViaRepo\UpdatePerson\updatePerson.html" />
+    <Content Include="App\angularPage\DbViaRepo\UpdatePerson\UpdatePersonController.js" />
     <Content Include="App\angularPage\Http\angularHttp.html" />
     <Content Include="App\angularPage\Http\angularHttpController.js" />
     <Content Include="App\app_module.js" />
@@ -145,17 +147,6 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
-    <Content Include="DBModel\DbModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBModel\DbModel.edmx.sql" />
-    <Content Include="DBModel\DbModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-      <LastGenOutput>DbModel.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="index.html" />
     <Content Include="Global.asax" />
@@ -211,13 +202,6 @@
     <Content Include="api\Home\GetLanguage\langes.json" />
     <Content Include="api\Home\GetLanguage\template.json" />
     <Content Include="api\Calisthenics\Exercises\Pushups.json" />
-    <EntityDeploy Include="DBModel\DbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DBModel\DbModel.edmx.diagram">
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="App_Data\pl_PL.json" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
@@ -988,51 +972,6 @@
     <Compile Include="Controllers\DbController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="DBModel\Address.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\Customer.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\CustomerAddress.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\DbModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\DbModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\DbModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\Product.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\ProductCategory.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\ProductDescription.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\ProductModel.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\ProductModelProductDescription.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\SalesOrderDetail.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel\SalesOrderHeader.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\calisthenicsDTO.cs" />
     <Compile Include="Models\DbDTO.cs" />
     <Compile Include="Models\Doc.cs" />
@@ -1057,6 +996,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\ToDo\" />
+    <Folder Include="App\angularPage\UIBootstrap\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
