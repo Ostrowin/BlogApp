@@ -5,8 +5,9 @@
 .container{
     margin-top: 15%;
 }
-.container-fluid{
-    margin-top: 5%;
+.container-fluid {
+    margin-top: 10vh;
+    
 }
 
 .button-LogIn {
@@ -122,3 +123,26 @@ select {
     min-height: 110px;
 }
 
+.form-control{
+    width:auto;
+}
+
+.fa-big{
+    font-size: 150%;
+}
+.fa:hover{
+    cursor: pointer;
+}
+.quickBar{
+    height: 25%;
+    width:100%;
+    z-index:1;
+    background-color:#111;
+    position: absolute;
+    top: 50px;
+    padding-top: 1rem;
+    border-bottom: 1px solid black;
+}
+.blur{
+    opacity: 0.5;
+}

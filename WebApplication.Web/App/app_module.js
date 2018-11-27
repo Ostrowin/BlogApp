@@ -57,4 +57,8 @@
                 });
             };
         };
+
+        $rootScope.visibilityQuickBar = function () {
+            $rootScope.quickBar = (($rootScope.quickBar) ? false : true);
+        }
     }]);

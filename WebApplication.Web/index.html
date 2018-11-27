@@ -14,19 +14,22 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC6Kf_uUDb9SoszEYH93pSc01903CU5ffg",
-    authDomain: "blogappair.firebaseapp.com",
-    databaseURL: "https://blogappair.firebaseio.com",
-    projectId: "blogappair",
-    storageBucket: "blogappair.appspot.com",
-    messagingSenderId: "1036967083667"
-  };
-  firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC6Kf_uUDb9SoszEYH93pSc01903CU5ffg",
+            authDomain: "blogappair.firebaseapp.com",
+            databaseURL: "https://blogappair.firebaseio.com",
+            projectId: "blogappair",
+            storageBucket: "blogappair.appspot.com",
+            messagingSenderId: "1036967083667"
+        };
+        firebase.initializeApp(config);
     </script>
 
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular-translate.js"></script>
     <script src="Scripts/angular-translate-loader-url.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.18.1/angular-translate-loader-static-files.js"></script>
@@ -37,6 +40,7 @@
     <script src="Scripts/angular-animate.min.js"></script>
     <script src="Scripts/angular-sanitize.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
 
     <script src="App/app_module.js"></script>
 
@@ -60,6 +64,10 @@
 
 </head>
 <body>
-    <div ng-view></div>
+    <div ng-include="'App/sharedPartials/navigation.html'"></div>
+    <div ng-if="quickBar">
+        <div ng-include="'App/sharedPartials/quickBar.html'"></div>
+    </div>
+    <div ng-class="quickBar ? 'blur' : ''" ng-view></div>
 </body>
 </html>
