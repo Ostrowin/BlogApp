@@ -1016,16 +1016,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebApplication.Model\WebApplication.Model.csproj">
-      <Project>{98ae7759-e715-4863-866c-3e2f84f65318}</Project>
-      <Name>WebApplication.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApplication.Repository\WebApplication.Repository.csproj">
-      <Project>{cc921eba-2ce0-49e8-8cc8-f158abf56bdf}</Project>
-      <Name>WebApplication.Repository</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
