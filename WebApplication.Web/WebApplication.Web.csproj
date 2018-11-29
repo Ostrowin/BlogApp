@@ -100,6 +100,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\BlogApp_firebase\public\Scripts\bundle.js" />
+    <Content Include="..\..\BlogApp_firebase\public\Scripts\bundle.min.js">
+      <DependentUpon>bundle.js</DependentUpon>
+    </Content>
     <Content Include="App\angularPage\angular.html" />
     <Content Include="App\angularPage\angularController.js" />
     <Content Include="App\angularPage\Databases\angularDatabases.html" />
@@ -145,6 +149,10 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bundle.css" />
+    <Content Include="Content\bundle.min.css">
+      <DependentUpon>bundle.css</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
@@ -205,6 +213,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <None Include="bundleconfig.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
